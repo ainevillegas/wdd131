@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WDD 131 – Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+
+<body>
+
+    <!-- Top Header -->
+    <header class="site-header">
+        <h1>WDD 131: Dynamic Web Fundamentals</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">I‑Learn</a></li>
+            <li><a href="#">Scripture</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Title -->
+    <main class="container">
+        <h2 class="name-title">Aine Villegas</h2>
+
+        <section class="content-grid">
+
+            <!-- About Me -->
+            <article class="card">
+                <div class="card-header">About Me</div>
+
+                <div class="about-top">
+                    <p>
+                        I am Aine Villegas and you can call me Aine. I was born and live in
+                        the Philippines. I am currently working as Data Quality Lead in a reputable
+                        airline in the Philippines. I love to travel and I love to learn new things.
+                    </p>
+
+                    <img src="images/profile.jpg" alt="Profile photo">
+                </div>
+
+                <h3 class="location">Mabalacat, Philippines</h3>
+
+                <div class="about-bottom">
+                    <figure>
+                        <img src="images/philippines.webp" alt="Flag of the Philippines">
+                        <figcaption>Official Flag of the Philippines</figcaption>
+                    </figure>
+
+                    <p>
+                        The Philippines is an archipelago located in Southeast Asia, consisting of
+                        over 7,000 islands. It is known for its beaches, biodiversity, and rich culture.
+                        With a history influenced by Indigenous communities and later Spanish and
+                        American colonization, the country blends tradition and modern life.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Web Dev Resources -->
+            <article class="card">
+                <div class="card-header">Web Dev Resources</div>
+                <ul class="resources">
+                    <li><a href="#">Dev.to Community</a></li>
+                    <li><a href="#">Smashing Magazine</a></li>
+                    <li><a href="#">CSS Tricks</a></li>
+                    <li><a href="#">W3 Schools</a></li>
+                </ul>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>© <span id="currentyear"></span> Aine Villegas, Philippines</p>
+        <p class="modified">Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+
+</body>
+
+</html>
