@@ -3,44 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- REQUIRED META TAGS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 131 Dynamic Web Fundamentals course page showcasing student profile and web development resources.">
+    <meta name="author" content="Aine Villegas">
+
     <title>WDD 131 – Dynamic Web Fundamentals</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JS (deferred, in head) -->
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Top Header -->
+    <!-- HEADER WITH NAV INSIDE -->
     <header class="site-header">
-        <h1>WDD 131: Dynamic Web Fundamentals</h1>
+        <h1>
+            <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+        </h1>
+
+        <nav class="site-nav">
+            <ul>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">I‑Learn</a></li>
+                <li><a href="#">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Navigation -->
-    <nav class="site-nav">
-        <ul>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">I‑Learn</a></li>
-            <li><a href="#">Scripture</a></li>
-            <li><a href="#">Final Project</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main Title -->
+    <!-- MAIN CONTENT -->
     <main class="container">
         <h2 class="name-title">Aine Villegas</h2>
 
         <section class="content-grid">
 
-            <!-- About Me -->
-            <article class="card">
+            <!-- ABOUT ME CARD -->
+            <section class="card">
                 <div class="card-header">About Me</div>
 
                 <div class="about-top">
                     <p>
-                        I am Aine Villegas and you can call me Aine. I was born and live in
-                        the Philippines. I am currently working as Data Quality Lead in a reputable
-                        airline in the Philippines. I love to travel and I love to learn new things.
+                        I am Aine Villegas and you can call me Aine. I was born and live in the Philippines.
+                        I am currently working as Data Quality Lead in a reputable airline in the Philippines.
+                        I love to travel and I love to learn new things.
                     </p>
-
                     <img src="images/profile.jpg" alt="Profile photo">
                 </div>
 
@@ -53,34 +70,31 @@
                     </figure>
 
                     <p>
-                        The Philippines is an archipelago located in Southeast Asia, consisting of
-                        over 7,000 islands. It is known for its beaches, biodiversity, and rich culture.
-                        With a history influenced by Indigenous communities and later Spanish and
-                        American colonization, the country blends tradition and modern life.
+                        The Philippines is an archipelago located in Southeast Asia, consisting of over 7,000 islands.
+                        It is known for its beaches, biodiversity, and rich culture shaped by indigenous traditions
+                        and historical influences.
                     </p>
                 </div>
-            </article>
+            </section>
 
-            <!-- Web Dev Resources -->
-            <article class="card">
+            <!-- WEB DEV RESOURCES CARD -->
+            <section class="card">
                 <div class="card-header">Web Dev Resources</div>
                 <ul class="resources">
                     <li><a href="#">Dev.to Community</a></li>
                     <li><a href="#">CSS Tricks</a></li>
                     <li><a href="#">W3 Schools</a></li>
                 </ul>
-            </article>
+            </section>
 
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <p>© <span id="currentyear"></span> Aine Villegas, Philippines</p>
         <p class="modified">Last Modification: <span id="lastModified"></span></p>
     </footer>
-
-    <script src="scripts/getdates.js"></script>
 
 </body>
 
