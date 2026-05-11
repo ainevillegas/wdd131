@@ -1,24 +1,22 @@
 
-// Footer info
-const year = document.querySelector("#year");
-const modified = document.querySelector("#modified");
+// ✅ Footer
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("modified").textContent = document.lastModified;
 
-year.textContent = new Date().getFullYear();
-modified.textContent = document.lastModified;
-
-// Weather values (static)
+// ✅ Static values
 const temp = 8;
 const windSpeed = 10;
 
-// Function (ONE LINE)
+// ✅ One-line wind chill function (Metric)
 const calculateWindChill = (t, v) =>
     13.12 + 0.6215 * t - 11.37 * Math.pow(v, 0.16) + 0.3965 * t * Math.pow(v, 0.16);
 
-const windChillElement = document.querySelector("#windchill");
+// ✅ Apply conditions
+const windChillDisplay = document.getElementById("windchill");
 
-// Conditions check
 if (temp <= 10 && windSpeed > 4.8) {
-    windChillElement.textContent = calculateWindChill(temp, windSpeed).toFixed(1) + " °C";
+    windChillDisplay.textContent =
+        calculateWindChill(temp, windSpeed).toFixed(1) + " °C";
 } else {
-    windChillElement.textContent = "N/A";
+    windChillDisplay.textContent = "N/A";
 }

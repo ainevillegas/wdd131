@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visit Switzerland</title>
+
+    <!-- ✅ META -->
+    <meta name="description" content="Explore Switzerland's Alps, scenic landscapes, and weather conditions.">
+    <meta name="author" content="Lolilaine S. Curro-Villegas">
+
+    <title>Switzerland | Place Page</title>
 
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
@@ -18,28 +23,30 @@
 
     <main>
 
-        <!-- HERO IMAGE WITH SRCSET -->
+        <!-- ✅ HERO -->
         <div class="hero">
             <picture>
-                <source srcset="images/swiss3.webp" media="(min-width: 1000px)">
-                <source srcset="images/swiss4webp" media="(min-width: 500px)">
+                <source srcset="images/swiss2.webp" media="(min-width: 1000px)">
+                <source srcset="images/swiss3.webp" media="(min-width: 500px)">
                 <img src="images/swiss1.webp" alt="Swiss Alps landscape" width="1500" height="750">
             </picture>
         </div>
 
-        <!-- COUNTRY INFO -->
+        <!-- ✅ INFO -->
         <section class="info">
             <h2>About Switzerland</h2>
-            <p>Switzerland is known for its mountains, lakes, and high quality of life.</p>
+            <p>
+                Switzerland is known for its Alps, lakes, and outdoor lifestyle.
+                It is a destination for skiing, hiking, and scenic travel.
+            </p>
         </section>
 
-        <!-- WEATHER SECTION -->
+        <!-- ✅ WEATHER -->
         <section class="weather">
             <h2>Weather</h2>
 
             <div class="weather-content">
-                <!-- SVG ICON (mobile view) -->
-                <img src="images/weather.png" alt="Weather icon" class="weather-icon">
+                <img src="images/weather.png" alt="Weather icon" class="weather-icon" width="60" height="60">
 
                 <p><strong>Temperature:</strong> <span id="temp">8</span> °C</p>
                 <p><strong>Wind Speed:</strong> <span id="wind">10</span> km/h</p>
