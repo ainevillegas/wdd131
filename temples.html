@@ -4,26 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Required Meta -->
+    <meta name="description"
+        content="A responsive temple album showcasing temples in the Philippines using modern web design and mobile-first layout.">
+    <meta name="author" content="Aine Villegas">
+
     <title>Temple Album</title>
 
-    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- ✅ CSS -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
 
-    <!-- JS -->
+    <!-- ✅ JS -->
     <script src="scripts/temples.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <h1>Temple Album</h1>
+        <h1>Philippines Temple Album</h1>
 
-        <!-- Hamburger Button -->
-        <button id="menuButton">☰</button>
+        <button id="menuButton" aria-label="Menu">☰</button>
 
         <nav>
-            <ul>
+            <ul id="navMenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
                 <li><a href="#">New</a></li>
@@ -37,51 +46,61 @@
         <h2>Temple Gallery</h2>
 
         <div class="gallery">
-            <!-- 9 images -->
+
             <figure>
-                <img src="	https://churchofjesuschristtemples.org/assets/img/temples/_temp/029-Manila-Philippines-Temple.jpg" alt="Manila Temple">
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/_temp/029-Manila-Philippines-Temple.jpg"
+                    alt="Manila Temple">
                 <figcaption>Manila Philippines Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="https://churchofjesuschristtemples.org/assets/img/temples/_temp/133-Cebu-City-Philippines-Temple.jpg" alt="Cebu Temple">
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/_temp/133-Cebu-City-Philippines-Temple.jpg"
+                    alt="Cebu Temple">
                 <figcaption>Cebu Philippines Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="https://churchofjesuschristtemples.org/assets/img/temples/bacolod-philippines-temple/bacolod-philippines-temple-70237-main.jpg" alt="Bacolod Temple">
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/bacolod-philippines-temple/bacolod-philippines-temple-70237-main.jpg"
+                    alt="Bacolod Temple">
                 <figcaption>Bacolod Philippines Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="https://churchofjesuschristtemples.org/assets/img/temples/alabang-philippines-temple/alabang-philippines-temple-67738.jpg" alt="Alabang Temple">
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/alabang-philippines-temple/alabang-philippines-temple-67738.jpg"
+                    alt="Alabang Temple">
                 <figcaption>Alabang Philippines Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="https://churchofjesuschristtemples.org/assets/img/temples/davao-philippines-temple/davao-philippines-temple-69513-main.jpg" alt="Davao Temple">
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/davao-philippines-temple/davao-philippines-temple-69513-main.jpg"
+                    alt="Davao Temple">
                 <figcaption>Davao Philippines Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="https://churchofjesuschristtemples.org/assets/img/temples/urdaneta-philippines-temple/urdaneta-philippines-temple-45874-main.jpg" alt="Urdaneta Temple">
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/urdaneta-philippines-temple/urdaneta-philippines-temple-45874-main.jpg"
+                    alt="Urdaneta Temple">
                 <figcaption>Urdaneta Philippines Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="https://churchofjesuschristtemples.org/assets/img/temples/naga-philippines-temple/naga-philippines-temple-68737-main.jpg" alt="Naga Temple">
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/naga-philippines-temple/naga-philippines-temple-68737-main.jpg"
+                    alt="Naga Temple">
                 <figcaption>Naga Philippines Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="https://churchofjesuschristtemples.org/assets/img/temples/cagayan-de-oro-philippines-temple/cagayan-de-oro-philippines-temple-50369-main.jpg" alt="Cagayan de Oro Temple">
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/cagayan-de-oro-philippines-temple/cagayan-de-oro-philippines-temple-50369-main.jpg"
+                    alt="Cagayan de Oro Temple">
                 <figcaption>Cagayan de Oro Philippines Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="https://churchofjesuschristtemples.org/assets/img/temples/iloilo-philippines-temple/iloilo-philippines-temple-68739-main.jpg" alt="Iloilo Temple">
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/iloilo-philippines-temple/iloilo-philippines-temple-68739-main.jpg"
+                    alt="Iloilo Temple">
                 <figcaption>Iloilo Philippines Temple</figcaption>
             </figure>
+
         </div>
     </main>
 
