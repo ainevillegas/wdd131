@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Switzerland</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Switzerland</h1>
+    </header>
+
+    <main>
+
+        <!-- HERO IMAGE WITH SRCSET -->
+        <div class="hero">
+            <picture>
+                <source srcset="images/swiss3.webp" media="(min-width: 1000px)">
+                <source srcset="images/swiss4webp" media="(min-width: 500px)">
+                <img src="images/swiss1.webp" alt="Swiss Alps landscape" width="1500" height="750">
+            </picture>
+        </div>
+
+        <!-- COUNTRY INFO -->
+        <section class="info">
+            <h2>About Switzerland</h2>
+            <p>Switzerland is known for its mountains, lakes, and high quality of life.</p>
+        </section>
+
+        <!-- WEATHER SECTION -->
+        <section class="weather">
+            <h2>Weather</h2>
+
+            <div class="weather-content">
+                <!-- SVG ICON (mobile view) -->
+                <img src="images/weather.png" alt="Weather icon" class="weather-icon">
+
+                <p><strong>Temperature:</strong> <span id="temp">8</span> °C</p>
+                <p><strong>Wind Speed:</strong> <span id="wind">10</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Aine Villegas, Philippines | Last Modified: <span id="modified"></span></p>
+    </footer>
+
+</body>
+
+</html>
