@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Images Example</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+
+                <!-- Large image -->
+                <source srcset="images/Temple.webp" media="(min-width: 1000px)">
+
+                <!-- Medium image -->
+                <source srcset="images/Temple.webp" media="(min-width: 500px)">
+
+                <!-- Default (small image) -->
+                <img src="images/Temple.webp" alt="Temple landscape view with surrounding scenery" width="1500"
+                    height="750">
+
+            </picture>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Responsive Images Activity</p>
+    </footer>
+
+</body>
+
+</html>

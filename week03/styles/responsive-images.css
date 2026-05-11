@@ -1,0 +1,44 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem;
+}
+
+/* Layout */
+header,
+main,
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Hero container */
+.hero {
+    width: 100%;
+}
+
+/* Responsive image */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer */
+footer {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
