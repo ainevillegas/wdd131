@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #0b6b4d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Hamburger button */
+#menuButton {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    display: block;
+}
+
+/* Hover effect */
+nav a:hover {
+    background: #555;
+}
+
+/* Main */
+main {
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+/* Gallery (1 column mobile) */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    background: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background: #0b6b4d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
