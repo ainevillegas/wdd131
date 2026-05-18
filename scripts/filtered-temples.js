@@ -66,7 +66,7 @@ const temples = [
     }
 ];
 
-// ✅ Display Function (FULLY FIXED)
+// ✅ Display
 function displayTemples(list) {
     const gallery = document.getElementById("gallery");
     gallery.innerHTML = "";
@@ -88,7 +88,7 @@ function displayTemples(list) {
     });
 }
 
-// ✅ Filter
+// ✅ Filter logic
 function filterTemples(type) {
     let filtered;
 
@@ -112,7 +112,15 @@ function filterTemples(type) {
     displayTemples(filtered);
 }
 
-// ✅ Load all
+document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const filter = link.dataset.filter;
+        filterTemples(filter);
+    });
+});
+
+// ✅ Initial load
 displayTemples(temples);
 
 // ✅ Footer
@@ -122,7 +130,7 @@ document.getElementById("copyright").textContent =
 document.getElementById("lastModified").textContent =
     document.lastModified;
 
-// ✅ Menu
+// ✅ Hamburger menu
 const menuButton = document.getElementById("menuButton");
 const navMenu = document.getElementById("navMenu");
 

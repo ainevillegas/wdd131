@@ -4,33 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Meta -->
+    <meta name="description" content="Temple album with dynamic filtering using JavaScript.">
+    <meta name="author" content="Aine Villegas">
+
     <title>Temple Album</title>
 
-    <!-- Font -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <link rel="stylesheet" href="styles/filtered-temples-large.css">
 
-    <!-- JS -->
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <h1>Temple Gallery</h1>
+        <h1>Temple Album</h1>
 
         <button id="menuButton">☰</button>
 
         <nav>
             <ul id="navMenu">
-                <li><a href="#" onclick="filterTemples('home')">Home</a></li>
-                <li><a href="#" onclick="filterTemples('old')">Old</a></li>
-                <li><a href="#" onclick="filterTemples('new')">New</a></li>
-                <li><a href="#" onclick="filterTemples('large')">Large</a></li>
-                <li><a href="#" onclick="filterTemples('small')">Small</a></li>
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
             </ul>
         </nav>
     </header>
