@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <!-- JS -->
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Temple Gallery</h1>
+
+        <button id="menuButton">☰</button>
+
+        <nav>
+            <ul id="navMenu">
+                <li><a href="#" onclick="filterTemples('home')">Home</a></li>
+                <li><a href="#" onclick="filterTemples('old')">Old</a></li>
+                <li><a href="#" onclick="filterTemples('new')">New</a></li>
+                <li><a href="#" onclick="filterTemples('large')">Large</a></li>
+                <li><a href="#" onclick="filterTemples('small')">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Temple Gallery</h2>
+        <div class="gallery" id="gallery"></div>
+    </main>
+
+    <footer>
+        <p id="copyright"></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

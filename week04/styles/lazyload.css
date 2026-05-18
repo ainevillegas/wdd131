@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+/* Center column */
+main {
+    max-width: 450px;
+    margin: auto;
+}
+
+/* Images stacked vertically */
+img {
+    display: block;
+    width: 400px;
+    height: 600px;
+    margin: 20px auto;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* ✅ Fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
