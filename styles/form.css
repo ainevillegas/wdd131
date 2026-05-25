@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: teal;
+    background: teal;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -14,8 +14,8 @@ header {
 main {
     max-width: 600px;
     margin: auto;
-    padding: 1rem;
     background: white;
+    padding: 1rem;
 }
 
 form {
@@ -39,9 +39,8 @@ fieldset {
     padding: 10px;
 }
 
-button,
 input[type="submit"] {
-    background-color: teal;
+    background: teal;
     color: white;
     border: none;
     padding: 10px;
@@ -53,4 +52,15 @@ footer {
     padding: 1rem;
     background: teal;
     color: white;
+}
+
+/* ✅ REQUIRED MEDIA QUERY */
+@media (max-width: 600px) {
+    main {
+        padding: 0.5rem;
+    }
+
+    form {
+        font-size: 0.9rem;
+    }
 }
