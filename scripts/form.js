@@ -1,5 +1,4 @@
 
-// ✅ Product array (REQUIRED)
 const products = [
     { id: "p1", name: "Laptop" },
     { id: "p2", name: "Smartphone" },
