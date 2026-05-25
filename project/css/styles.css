@@ -1,0 +1,67 @@
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #fbbf24;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 1rem;
+}
+
+.card-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: white;
+}
+
+button {
+    background: var(--secondary-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
