@@ -4,48 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Asia Travel Explorer | Travel Planner</title>
 
+    <meta name="description"
+        content="Plan your trip using our travel planner and get a personalized destination and cost estimate.">
+    <meta name="author" content="Aine Villegas">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Contact Us</h1>
-        <nav>
+        <h1>Asia Travel Explorer</h1>
+
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="destinations.html">Destinations</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Travel Planner</a>
+            <a href="references.html">References</a>
         </nav>
     </header>
 
     <main>
 
-        <h2>Send a Message</h2>
+        <section>
+            <h2>Travel Planner</h2>
 
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
+            <p>Fill in your details to receive a recommended destination and estimated travel cost.</p>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
+            <form id="contactForm">
 
-            <label for="message">Message:</label>
-            <textarea id="message" required></textarea>
+                <!-- USER INFO -->
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
-            <button type="submit">Submit</button>
-        </form>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-        <p id="responseMessage"></p>
+                <!-- TRIP DETAILS -->
+                <label for="tripType">Trip Type</label>
+                <select id="tripType" name="tripType" required>
+                    <option value="">Choose</option>
+                    <option value="culture">Culture</option>
+                    <option value="food">Food</option>
+                    <option value="beach">Beach</option>
+                    <option value="adventure">Adventure</option>
+                </select>
+
+                <label for="budget">Budget</label>
+                <select id="budget" name="budget" required>
+                    <option value="">Choose</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <!-- CALCULATOR FIELDS -->
+                <label for="days">Number of Days</label>
+                <input type="number" id="days" name="days" min="1" required>
+
+                <label for="people">Number of Travelers</label>
+                <input type="number" id="people" name="people" min="1" required>
+
+                <!-- NOTES -->
+                <label for="message">Additional Notes</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <!-- BUTTON -->
+                <button type="submit">Get Travel Plan</button>
+
+            </form>
+
+            <!-- OUTPUT -->
+            <section id="responseMessage" class="response-box"></section>
+
+        </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Travel Explorer</p>
+        <p>&copy; 2026 Asia Travel Explorer | Aine Villegas
+            <a href="references.html">References</a>
+        </p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- JS PATH -->
+    <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

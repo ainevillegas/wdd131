@@ -4,35 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Explorer</title>
-
+    <title>Asia Travel Explorer | Home</title>
+    <meta name="description" content="Explore top destinations across Asia.">
+    <meta name="author" content="Aine Villegas">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Travel Explorer</h1>
-        <nav>
+        <h1>Asia Travel Explorer</h1>
+
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="destinations.html">Destinations</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Travel Planner</a>
+            <a href="references.html">References</a>
         </nav>
     </header>
 
-    <main>
-        <h2>Welcome to Travel Explorer</h2>
-        <p>Discover amazing destinations around the world.</p>
+    <main id="main-content">
 
-        <h3>Popular Destinations</h3>
-        <ul id="destinationList"></ul>
+        <section class="hero">
+            <h2>Plan Your Next Asian Adventure</h2>
+            <p>Discover culture, food, and nature.</p>
+
+            <img src="images/asia.webp" alt="Discover Asia" loading="lazy">
+        </section>
+
+        <section>
+            <h2>Popular Destinations</h2>
+
+            <div class="card-container">
+                <img src="images/japan.webp" alt="Japan cherry blossoms temple" loading="lazy">
+                <img src="images/korea.webp" alt="South Korea skyline" loading="lazy">
+                <img src="images/thailand.webp" alt="Thailand beach scenery" loading="lazy">
+                <img src="images/batanes.webp" alt="Batanes hills Philippines" loading="lazy">
+            </div>
+
+            <ul id="destinationList" class="destination-list"></ul>
+        </section>
+
+        <section class="tips">
+            <h2>Travel Tips</h2>
+
+            <div class="tip-grid">
+                <article>
+                    <h3>Pack Smart</h3>
+                    <p>Comfortable clothing and essentials.</p>
+                </article>
+
+                <article>
+                    <h3>Respect Culture</h3>
+                    <p>Follow customs and traditions.</p>
+                </article>
+
+                <article>
+                    <h3>Plan Ahead</h3>
+                    <p>Check transportation and bookings.</p>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Travel Explorer</p>
+        <p>&copy; 2026 Asia Travel Explorer | Aine Villegas
+            <a href="references.html">References</a>
+        </p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
