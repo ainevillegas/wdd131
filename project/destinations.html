@@ -9,6 +9,7 @@
         content="Review featured Asian destinations with travel highlights, daily costs, activities, and destination recommendations.">
     <meta name="author" content="Aine Villegas">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -28,13 +29,87 @@
             <h2>Explore Destination Reviews</h2>
             <div id="destinationCards" class="card-container"></div>
         </section>
+
+        <section>
+            <h2>Destination Product Review Form</h2>
+
+            <form id="destinationForm" method="get" action="review.html">
+                <label for="destinationSelect">Select Destination</label>
+                <select id="destinationSelect" name="destinationSelect" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    <option value="japan">Japan</option>
+                    <option value="korea">South Korea</option>
+                    <option value="thailand">Thailand</option>
+                    <option value="philippines">Philippines</option>
+                </select>
+
+                <fieldset>
+                    <legend>Trip Type</legend>
+
+                    <label for="culture">
+                        <input type="radio" id="culture" name="tripType" value="culture" required>
+                        Culture
+                    </label>
+
+                    <label for="food">
+                        <input type="radio" id="food" name="tripType" value="food" required>
+                        Food
+                    </label>
+
+                    <label for="beach">
+                        <input type="radio" id="beach" name="tripType" value="beach" required>
+                        Beach
+                    </label>
+
+                    <label for="adventure">
+                        <input type="radio" id="adventure" name="tripType" value="adventure" required>
+                        Adventure
+                    </label>
+
+                    <label for="city">
+                        <input type="radio" id="city" name="tripType" value="city" required>
+                        City Tour
+                    </label>
+                </fieldset>
+
+                <label for="travelDate">Preferred Travel Date</label>
+                <input type="date" id="travelDate" name="travelDate" required>
+
+                <fieldset>
+                    <legend>Travel Add-ons</legend>
+
+                    <label for="hotel">
+                        <input type="checkbox" id="hotel" name="addons" value="hotel">
+                        Hotel
+                    </label>
+
+                    <label for="meals">
+                        <input type="checkbox" id="meals" name="addons" value="meals">
+                        Meals
+                    </label>
+
+                    <label for="tourGuide">
+                        <input type="checkbox" id="tourGuide" name="addons" value="tourGuide">
+                        Tour Guide
+                    </label>
+
+                    <label for="transport">
+                        <input type="checkbox" id="transport" name="addons" value="transport">
+                        Transportation
+                    </label>
+                </fieldset>
+
+                <label for="message">Destination Review Notes</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Asia Travel Explorer | Aine Villegas | <a href="references.html">References</a></p>
     </footer>
-
-    <script src="js/scripts.js"></script>
 </body>
 
 </html>
