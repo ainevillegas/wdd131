@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Asia Travel Explorer | Product Review Home</title>
+
     <meta name="description"
-        content="Explore top travel destinations across Asia with helpful guides, photos, tips, and destination reviews.">
+        content="Explore top travel destinations across Asia with travel reviews, planning tools, destination guides, and useful travel tips.">
+
     <meta name="author" content="Aine Villegas">
+
     <link rel="stylesheet" href="css/styles.css">
+
     <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
+
     <header>
         <h1>Asia Travel Explorer</h1>
 
@@ -25,10 +31,16 @@
     </header>
 
     <main>
+
         <section class="hero">
             <h2>Plan Your Next Asian Adventure</h2>
-            <p>Discover culture, food, nature, and travel reviews across Asia.</p>
-            <img src="images/asia.webp" alt="Discover Asia" loading="lazy">
+
+            <p>
+                Discover culture, food, nature, and unforgettable experiences
+                across Asia.
+            </p>
+
+            <img src="images/asia.webp" alt="Beautiful travel destinations across Asia" loading="lazy">
         </section>
 
         <section>
@@ -36,8 +48,11 @@
 
             <div class="card-container">
                 <img src="images/japan.webp" alt="Japan cherry blossoms temple" loading="lazy">
+
                 <img src="images/korea.webp" alt="South Korea skyline" loading="lazy">
+
                 <img src="images/thailand.webp" alt="Thailand beach scenery" loading="lazy">
+
                 <img src="images/batanes.webp" alt="Batanes hills Philippines" loading="lazy">
             </div>
 
@@ -48,14 +63,26 @@
             <h2>Travel Product Review Form</h2>
 
             <form id="contactForm" method="get" action="review.html">
-                <label for="destinationSelect">Select Destination Product</label>
+
+                <!-- SELECT -->
+
+                <label for="destinationSelect">
+                    Select Destination
+                </label>
+
                 <select id="destinationSelect" name="destinationSelect" required>
-                    <option value="" disabled selected>Select a Product ...</option>
-                    <option value="japan">Japan Travel Review</option>
-                    <option value="korea">South Korea Travel Review</option>
-                    <option value="thailand">Thailand Travel Review</option>
-                    <option value="philippines">Philippines Travel Review</option>
+
+                    <option value="" disabled selected>
+                        Select a Product ...
+                    </option>
+
+                    <option value="japan">Japan</option>
+                    <option value="korea">South Korea</option>
+                    <option value="thailand">Thailand</option>
+                    <option value="philippines">Philippines</option>
                 </select>
+
+                <!-- RADIO BUTTONS -->
 
                 <fieldset>
                     <legend>Trip Type</legend>
@@ -66,28 +93,35 @@
                     </label>
 
                     <label for="food">
-                        <input type="radio" id="food" name="tripType" value="food">
+                        <input type="radio" id="food" name="tripType" value="food" required>
                         Food
                     </label>
 
                     <label for="beach">
-                        <input type="radio" id="beach" name="tripType" value="beach">
+                        <input type="radio" id="beach" name="tripType" value="beach" required>
                         Beach
                     </label>
 
                     <label for="adventure">
-                        <input type="radio" id="adventure" name="tripType" value="adventure">
+                        <input type="radio" id="adventure" name="tripType" value="adventure" required>
                         Adventure
                     </label>
 
                     <label for="city">
-                        <input type="radio" id="city" name="tripType" value="city">
+                        <input type="radio" id="city" name="tripType" value="city" required>
                         City Tour
                     </label>
                 </fieldset>
 
-                <label for="travelDate">Preferred Travel Date</label>
+                <!-- DATE INPUT -->
+
+                <label for="travelDate">
+                    Preferred Travel Date
+                </label>
+
                 <input type="date" id="travelDate" name="travelDate" required>
+
+                <!-- CHECKBOXES -->
 
                 <fieldset>
                     <legend>Travel Add-ons</legend>
@@ -113,10 +147,18 @@
                     </label>
                 </fieldset>
 
-                <label for="message">Travel Review Notes</label>
-                <textarea id="message" name="message" required></textarea>
+                <label for="message">
+                    Additional Notes
+                </label>
 
-                <button type="submit">Submit Review</button>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <!-- SUBMIT BUTTON -->
+
+                <button type="submit">
+                    Submit Review
+                </button>
+
             </form>
         </section>
 
@@ -124,27 +166,41 @@
             <h2>Travel Tips</h2>
 
             <div class="tip-grid">
+
                 <article>
                     <h3>Pack Smart</h3>
-                    <p>Bring comfortable clothing and important travel essentials.</p>
+                    <p>
+                        Bring comfortable clothing and travel essentials.
+                    </p>
                 </article>
 
                 <article>
                     <h3>Respect Culture</h3>
-                    <p>Follow local customs, rules, and traditions.</p>
+                    <p>
+                        Learn local customs and traditions before visiting.
+                    </p>
                 </article>
 
                 <article>
                     <h3>Plan Ahead</h3>
-                    <p>Check transportation, weather, and hotel bookings early.</p>
+                    <p>
+                        Check transportation, hotels, and attractions early.
+                    </p>
                 </article>
+
             </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Asia Travel Explorer | Aine Villegas | <a href="references.html">References</a></p>
+        <p>
+            &copy; 2026 Asia Travel Explorer |
+            Aine Villegas |
+            <a href="references.html">References</a>
+        </p>
     </footer>
+
 </body>
 
 </html>
