@@ -9,6 +9,7 @@
         content="References and image sources used for the Asia Travel Explorer website and destination product reviews.">
     <meta name="author" content="Aine Villegas">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -36,13 +37,87 @@
                 <li>Unsplash, Pexels, or Wikimedia Commons - Image references used for travel photos.</li>
             </ul>
         </section>
+
+        <section>
+            <h2>Reference Product Review Form</h2>
+
+            <form id="referenceForm" method="get" action="review.html">
+                <label for="sourceSelect">Select a Source Product</label>
+                <select id="sourceSelect" name="sourceSelect" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    <option value="japan">Japan Tourism Source</option>
+                    <option value="korea">Korea Tourism Source</option>
+                    <option value="thailand">Thailand Tourism Source</option>
+                    <option value="philippines">Philippines Tourism Source</option>
+                </select>
+
+                <fieldset>
+                    <legend>Reference Rating</legend>
+
+                    <label for="rating1">
+                        <input type="radio" id="rating1" name="rating" value="1" required>
+                        1 Star
+                    </label>
+
+                    <label for="rating2">
+                        <input type="radio" id="rating2" name="rating" value="2" required>
+                        2 Stars
+                    </label>
+
+                    <label for="rating3">
+                        <input type="radio" id="rating3" name="rating" value="3" required>
+                        3 Stars
+                    </label>
+
+                    <label for="rating4">
+                        <input type="radio" id="rating4" name="rating" value="4" required>
+                        4 Stars
+                    </label>
+
+                    <label for="rating5">
+                        <input type="radio" id="rating5" name="rating" value="5" required>
+                        5 Stars
+                    </label>
+                </fieldset>
+
+                <label for="reviewDate">Review Date</label>
+                <input type="date" id="reviewDate" name="reviewDate" required>
+
+                <fieldset>
+                    <legend>Reference Uses</legend>
+
+                    <label for="research">
+                        <input type="checkbox" id="research" name="uses" value="research">
+                        Research
+                    </label>
+
+                    <label for="images">
+                        <input type="checkbox" id="images" name="uses" value="images">
+                        Images
+                    </label>
+
+                    <label for="facts">
+                        <input type="checkbox" id="facts" name="uses" value="facts">
+                        Travel Facts
+                    </label>
+
+                    <label for="planning">
+                        <input type="checkbox" id="planning" name="uses" value="planning">
+                        Trip Planning
+                    </label>
+                </fieldset>
+
+                <label for="message">Reference Notes</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Asia Travel Explorer | Aine Villegas | <a href="references.html">References</a></p>
     </footer>
-
-    <script src="js/scripts.js"></script>
 </body>
 
 </html>
