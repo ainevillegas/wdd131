@@ -7,7 +7,6 @@
     --border-color: #99f6e4;
 }
 
-/* Reset & Base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +20,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -33,7 +31,6 @@ header h1 {
     margin-bottom: 0.75rem;
 }
 
-/* Navigation */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -47,14 +44,13 @@ nav a {
     font-weight: bold;
     padding: 0.5rem 0.8rem;
     border-radius: 6px;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
     background-color: var(--secondary-color);
 }
 
-/* Layout */
 main {
     max-width: 1100px;
     margin: auto;
@@ -65,7 +61,6 @@ section {
     margin-bottom: 1.5rem;
 }
 
-/* Hero */
 .hero {
     background: linear-gradient(135deg, #115e59, #0f766e, #14b8a6);
     color: white;
@@ -86,25 +81,24 @@ section {
     object-fit: cover;
 }
 
-/* Lists */
 .destination-list {
     background: white;
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 1rem 1rem 1rem 1.5rem;
+    margin-top: 1rem;
 }
 
 .destination-list li {
     margin-bottom: 0.5rem;
 }
 
-/* Cards */
 .card-container {
     display: grid;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
-/* Images inside grid (INDEX page fix) */
 .card-container img {
     width: 100%;
     height: 200px;
@@ -112,7 +106,6 @@ section {
     border-radius: 10px;
 }
 
-/* Card components (DESTINATIONS page) */
 .card {
     overflow: hidden;
     border-top: 5px solid var(--accent-color);
@@ -141,7 +134,6 @@ section {
     color: var(--primary-color);
 }
 
-/* Tips */
 .tip-grid {
     display: grid;
     gap: 1rem;
@@ -155,20 +147,32 @@ section {
     box-shadow: 0 2px 6px rgba(15, 118, 110, 0.1);
 }
 
-/* Form */
 form {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    max-width: 550px;
+    max-width: 600px;
     background: white;
     border: 1px solid var(--border-color);
     padding: 1rem;
     border-radius: 10px;
 }
 
+fieldset {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+legend,
 label {
     font-weight: bold;
+}
+
+fieldset label {
+    display: block;
+    font-weight: normal;
+    margin-top: 0.5rem;
 }
 
 input,
@@ -178,6 +182,11 @@ textarea {
     padding: 0.75rem;
     border: 1px solid var(--border-color);
     border-radius: 6px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
 }
 
 input:focus,
@@ -191,7 +200,6 @@ textarea {
     min-height: 120px;
 }
 
-/* Button */
 button {
     background-color: var(--accent-color);
     color: white;
@@ -208,7 +216,6 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* Response Box */
 .response-box {
     margin-top: 1rem;
     background: white;
@@ -217,7 +224,6 @@ button:hover {
     border-radius: 10px;
 }
 
-/* References */
 .references {
     background: white;
     border: 1px solid var(--border-color);
@@ -225,7 +231,6 @@ button:hover {
     border-radius: 10px;
 }
 
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: white;
@@ -243,7 +248,6 @@ footer a:hover {
     color: var(--secondary-color);
 }
 
-/* Responsive */
 @media (min-width: 600px) {
     .tip-grid {
         grid-template-columns: repeat(3, 1fr);

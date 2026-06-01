@@ -1,12 +1,8 @@
-
-/* ===============================
-   DESTINATIONS (ARRAY + OBJECTS)
-================================= */
 const destinations = [
     {
         name: "Japan",
         city: "Tokyo and Kyoto",
-        description: "Modern and traditional culture with temples.",
+        description: "Modern and traditional culture with temples, food, and scenic views.",
         price: 150,
         bestFor: "culture",
         image: "images/japan.webp",
@@ -15,7 +11,7 @@ const destinations = [
     {
         name: "South Korea",
         city: "Seoul and Busan",
-        description: "Food, shopping, and city life.",
+        description: "Food, shopping, music, and exciting city life.",
         price: 120,
         bestFor: "food",
         image: "images/korea.webp",
@@ -24,7 +20,7 @@ const destinations = [
     {
         name: "Thailand",
         city: "Bangkok and Phuket",
-        description: "Beaches and tropical relaxation.",
+        description: "Beautiful beaches, temples, markets, and tropical relaxation.",
         price: 90,
         bestFor: "beach",
         image: "images/thailand.webp",
@@ -33,22 +29,28 @@ const destinations = [
     {
         name: "Philippines",
         city: "Batanes and Davao",
-        description: "Islands and adventure.",
+        description: "Islands, mountains, nature trips, and outdoor adventure.",
         price: 80,
         bestFor: "adventure",
         image: "images/batanes.webp",
         alt: "Philippines island"
+    },
+    {
+        name: "Singapore",
+        city: "Singapore City",
+        description: "Clean city attractions, modern landmarks, gardens, and shopping.",
+        price: 140,
+        bestFor: "city",
+        image: "images/singapore.webp",
+        alt: "Singapore city travel"
     }
 ];
 
-/* ===============================
-   DISPLAY LIST (ARRAY METHOD)
-================================= */
 function displayList() {
     const list = document.querySelector("#destinationList");
 
     if (list) {
-        list.innerHTML = destinations.map(dest => `
+        list.innerHTML = destinations.map((dest) => `
             <li>
                 <strong>${dest.name}</strong> - ${dest.city} - $${dest.price}/day
             </li>
@@ -56,14 +58,11 @@ function displayList() {
     }
 }
 
-/* ===============================
-   DISPLAY CARDS 
-================================= */
 function displayCards() {
     const container = document.querySelector("#destinationCards");
 
     if (container) {
-        container.innerHTML = destinations.map(dest => `
+        container.innerHTML = destinations.map((dest) => `
             <article class="card">
                 <img src="${dest.image}" alt="${dest.alt}" loading="lazy">
                 <div class="card-content">
@@ -76,21 +75,12 @@ function displayCards() {
     }
 }
 
-/* ===============================
-   GET DESTINATION 
-================================= */
 function getSuggestion(tripType) {
-    return destinations.find(dest => dest.bestFor === tripType)
-        || destinations[0];
+    return destinations.find((dest) => dest.bestFor === tripType) || destinations[0];
 }
 
-/* ===============================
-   CALCULATE PRICE 
-================================= */
-function calculatePrice(destination, days, people, tripType) {
-
+function calculatePrice(destination, days, people, tripType, addonCount) {
     let baseCost = destination.price * days * people;
-
     let multiplier = 1;
 
     if (tripType === "culture") {
@@ -101,69 +91,65 @@ function calculatePrice(destination, days, people, tripType) {
         multiplier = 1.1;
     } else if (tripType === "adventure") {
         multiplier = 1.25;
+    } else if (tripType === "city") {
+        multiplier = 1.18;
     }
 
-    return Math.round(baseCost * multiplier);
+    const addonCost = addonCount * 25 * days;
+    return Math.round((baseCost * multiplier) + addonCost);
 }
 
-/* ===============================
-   FORM HANDLER 
-================================= */
 function handleForm(event) {
     event.preventDefault();
 
-    console.log(" Form submitted"); // Debug check
-
     const name = document.querySelector("#name").value.trim();
     const email = document.querySelector("#email").value.trim();
-    const tripType = document.querySelector("#tripType").value;
+    const destinationSelect = document.querySelector("#destinationSelect").value;
     const budget = document.querySelector("#budget").value;
+    const tripTypeInput = document.querySelector("input[name='tripType']:checked");
+    const travelDate = document.querySelector("#travelDate").value;
     const days = Number(document.querySelector("#days").value);
     const people = Number(document.querySelector("#people").value);
     const notes = document.querySelector("#message").value.trim();
-
+    const checkedAddons = document.querySelectorAll("input[name='addons']:checked");
     const response = document.querySelector("#responseMessage");
 
-    /*  VALIDATION */
-    if (!name || !email || !tripType || !budget || !days || !people || !notes) {
-        response.innerHTML = `<p>Please complete all fields.</p>`;
+    if (!name || !email || !destinationSelect || !budget || !tripTypeInput || !travelDate || !days || !people || !notes) {
+        response.innerHTML = "<p>Please complete all fields.</p>";
         return;
     }
 
-    /* GET DATA */
+    const tripType = tripTypeInput.value;
     const destination = getSuggestion(tripType);
-    const totalCost = calculatePrice(destination, days, people, tripType);
+    const totalCost = calculatePrice(destination, days, people, tripType, checkedAddons.length);
 
-    /* OBJECT */
     const traveler = {
-        name,
-        email,
-        tripType,
-        budget,
-        days,
-        people,
-        notes,
+        name: name,
+        email: email,
+        selectedProduct: destinationSelect,
+        budget: budget,
+        tripType: tripType,
+        travelDate: travelDate,
+        days: days,
+        people: people,
+        notes: notes,
         destination: destination.name,
         cost: totalCost
     };
 
-    /* SAVE */
     localStorage.setItem("traveler", JSON.stringify(traveler));
 
-    /* DISPLAY RESULT (FIXED OUTPUT) */
     response.innerHTML = `
         <h3>Travel Plan Summary</h3>
         <p><strong>Name:</strong> ${traveler.name}</p>
-        <p><strong>Destination:</strong> ${traveler.destination}</p>
+        <p><strong>Recommended Destination:</strong> ${traveler.destination}</p>
+        <p><strong>Travel Date:</strong> ${traveler.travelDate}</p>
         <p><strong>Trip:</strong> ${traveler.days} days for ${traveler.people} traveler(s)</p>
         <p><strong>Estimated Cost:</strong> $${traveler.cost}</p>
         <p>${destination.description}</p>
     `;
 }
 
-/* ===============================
-   LOAD SAVED 
-================================= */
 function loadSavedTraveler() {
     const saved = localStorage.getItem("traveler");
     const response = document.querySelector("#responseMessage");
@@ -179,9 +165,6 @@ function loadSavedTraveler() {
     }
 }
 
-/* ===============================
-   INIT 
-================================= */
 document.addEventListener("DOMContentLoaded", () => {
     displayList();
     displayCards();
