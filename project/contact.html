@@ -9,6 +9,7 @@
         content="Use the Asia Travel Explorer planner to review destinations and receive a personalized travel recommendation.">
     <meta name="author" content="Aine Villegas">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -62,22 +63,22 @@
                     </label>
 
                     <label for="food">
-                        <input type="radio" id="food" name="tripType" value="food">
+                        <input type="radio" id="food" name="tripType" value="food" required>
                         Food
                     </label>
 
                     <label for="beach">
-                        <input type="radio" id="beach" name="tripType" value="beach">
+                        <input type="radio" id="beach" name="tripType" value="beach" required>
                         Beach
                     </label>
 
                     <label for="adventure">
-                        <input type="radio" id="adventure" name="tripType" value="adventure">
+                        <input type="radio" id="adventure" name="tripType" value="adventure" required>
                         Adventure
                     </label>
 
                     <label for="city">
-                        <input type="radio" id="city" name="tripType" value="city">
+                        <input type="radio" id="city" name="tripType" value="city" required>
                         City Tour
                     </label>
                 </fieldset>
@@ -116,7 +117,7 @@
                 <input type="number" id="people" name="people" min="1" required>
 
                 <label for="message">Additional Notes</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
                 <button type="submit">Get Travel Plan</button>
             </form>
@@ -128,8 +129,6 @@
     <footer>
         <p>&copy; 2026 Asia Travel Explorer | Aine Villegas | <a href="references.html">References</a></p>
     </footer>
-
-    <script src="js/scripts.js"></script>
 </body>
 
 </html>
